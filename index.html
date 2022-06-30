@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="sorting.css">
+</head>
+<body>
+        <header id="main-header">
+            <h1><b>Sorting Visualizer</b></h1>
+        </header>
+    <nav class="navbar my-2">
+        <div class="container-fluid">
+          <button type="button" id="array" class="btn"><b>New Array</b> </button>
+          <input id="slider" type="range" min=5 max=105 step=1 value=30 ><span class="range-slider_value">0</span>
+           <div id="dot-wrapper">
+                <form class="dot-form" action="">
+                    <h5 id="form-title">Speed:</h5>
+                    <div id="dot-slider">
+                        <input type="radio" name="dot-speed" id="1" value=1 required>
+                        <label for="1" data-dot-speed="1"></label>
+
+                        <input type="radio" name="dot-speed" id="2" value=10 required>
+                        <label for="2" data-dot-speed="2"></label>
+
+                        <input type="radio" name="dot-speed" id="3" value=100 required>
+                        <label for="3" data-dot-speed="3"></label>
+
+                        <input type="radio" name="dot-speed" id="4" value=500 required>
+                        <label for="4" data-dot-speed="4"></label>
+
+                        <input type="radio" name="dot-speed" id="5" value=800 required>
+                        <label for="5" data-dot-speed="5"></label>
+
+                        <div id="dot-input-label"></div>
+                    </div>
+                </form>
+           </div>
+          <div class="algos gap-2 d-md-flex justify-content-md-end" >
+                    <button type="button" id="bsort" class="btn "><b>Bubble Sort</b></button>
+                    <button type="button" id="isort" class="btn "><b>Insertion Sort</b></button>
+                    <button type="button" id="ssort" class="btn "><b>Selection Sort</b></button>
+                    <button type="button" id="qsort" class="btn "><b>Quick Sort</b></button>
+                    <button type="button" id="msort" class="btn "><b>Merge Sort</b></button>
+            </div>
+        </div>
+    </nav>
+     <section>
+        <div></div>
+        <div id="array_container"></div>
+        <div></div>  
+     </section> 
+     <footer>
+
+     </footer>
+     <script src="main.js"></script>
+     <script src="sorting.js"></script>
+
+     <script src="bubble.js"></script>
+     <script src="insertion.js"></script>
+     <script src="merge.js"></script>
+     <script src="quick.js"></script>
+     <script src="selection.js"></script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+/*
+    *****************************
+    DONE BY : NAVDEEP KHEDE
+    E-MAIL  : nayankhede@fmail.com
+    *****************************
+*/
+
+body{
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    background-size: 215vh 100vh;
+    background-repeat: no-repeat;
+}
+
+#main-header{
+    padding-top: 0.5%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: rgb(40, 53, 105);
+    -webkit-text-stroke: 1px #282828;
+    text-shadow: 0px 2px 3px #282828;
+    margin-bottom: 0px;
+}
+
+.navbar{
+  background: linear-gradient(to top, rgba(51, 255, 231, 0.7), rgba(255, 255, 255, 0.9));
+}
+
+.btn{
+  border: none;
+}
+
+.btn :hover{
+  color: rgba(14, 80, 16, 0.9);
+}
+
+#dot-wrapper {
+  position: absolute;
+  left: 25%;
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dot-form {
+  width: 300%;
+  max-width: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #0d3203;
+}
+
+form #form-title {
+  margin-bottom: 0%;
+  font-weight: 600;
+  font-size: medium;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 0.85;
+}
+
+form #dot-slider {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    position: relative;
+    width: 100%;
+    height: 40px;
+}
+
+form #dot-slider::before{
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: calc(100% *(4/5));
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #989696;
+}
+
+form #dot-slider input, form #dot-slider label{
+  box-sizing: border-box;
+  flex: 1;
+  cursor: pointer; 
+}
+
+form #dot-slider label{
+  display: inline-block;
+  position: relative;
+  width: 20%;
+  height: 100%;
+}
+
+form #dot-slider label::before {
+  content: attr(data-dot-speed);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 30px);
+  font-size: 10px;
+  letter-spacing: 0.4px;
+  font-weight: 500;
+  opacity: 0.55;
+  white-space: nowrap;
+  transition: all 0.15s ease-in-out;
+}
+
+form #dot-slider label::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid #989696;
+  background:  linear-gradient(to bottom right, rgba(171, 187, 151, 0.98), rgba(0, 248, 236, 0.98));
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out ;
+}
+
+form #dot-slider label:hover::after {
+  transform: translate(-50%, -50%) scale(1.25);
+}
+
+form #dot-slider input:checked + label::before {
+  font-weight: 800;
+  opacity: 1;
+}
+
+form #dot-slider input:checked + label::after {
+  border-width: 4px;
+  transform: translate(-50%, -50%) scale(0.95);
+  border: 2px solid rgb(0, 0, 10);
+}
+
+ #dot-slider input {
+  display: none;
+}  
+
+#dot-slider input:checked ~ #dot-input-label {
+  opacity: 1 ;
+}
+
+#dot-slider #dot-input-label {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  background: rgb(40, 53, 105);
+  border-radius: 50%;
+  transition: all 0.15s ease-in-out;
+  transform: translate(-50%, -50%);
+  border: 2px solid rgba(21, 20, 20, 0.562);
+  opacity: 0;
+  z-index: 2;
+}
+
+#dot-slider input:checked:nth-child(1) ~ #dot-input-label {
+  left : 10%;
+}
+#dot-slider input:checked:nth-child(3) ~ #dot-input-label {
+  left : 29.5%;
+}
+#dot-slider input:checked:nth-child(5) ~ #dot-input-label {
+  left : 50%;
+}
+#dot-slider input:checked:nth-child(7) ~ #dot-input-label {
+  left : 70%;
+}
+#dot-slider input:checked:nth-child(9) ~ #dot-input-label {
+  left : 90%;
+}
+
+section {
+    /* display: -ms-grid; */
+    display: flex;
+    background: linear-gradient(to top left, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    border-radius: 2rem;
+    margin: 0px 350px;
+    box-shadow: 10px 10px 20px rgba(122, 122, 122, 0.212px);
+  }
+
+section #array_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0.2px 28px;
+    width: 100%;
+    height: 80vh;
+    flex-direction: row;
+  }
+
+#slider{
+    position: absolute ;
+    left : 8%;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 8rem;
+  }
+
+  input[type="range"]::-webkit-slider-runnable-track {
+    background: #053a5f;
+    height: 0.5rem;
+    border-radius: 5px;
+  } 
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    margin-top: -4px; /* Centers thumb on the track */
+    background-color: #5cd5eb;
+    border-radius: 25px;
+    height: 1rem;
+    width: 1rem;    
+ }  
+
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
+}
+
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]:focus::-webkit-slider-thumb {
+  border: 1px solid #053a5f;
+  outline: 3px solid #1EE3CF;
+  outline-offset: 0.122rem;
+}
+
+.range-slider_value {
+    position: absolute;
+    left: 17%;
+    color: white;
+    border-radius: 5px;
+    background: #053a5f;
+    padding: 5px 10px;
+}
+
+/*
+    *****************************
+    DONE BY : NAVDEEP KHEDE
+    E-MAIL  : nayankhede@fmail.com
+    *****************************
+*/
